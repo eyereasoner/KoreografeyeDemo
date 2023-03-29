@@ -1,0 +1,17 @@
+Hints for linking
+
+1. Check which packages are linked
+
+npm ls -g --depth=0 --link=true
+
+2. Remove a global linked package
+
+npm r koreografeye -g
+
+3. Link a package (in the original project)
+
+npm link
+
+4. Link in a demo project
+
+npm link koreografeye

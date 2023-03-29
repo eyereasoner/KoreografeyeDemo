@@ -1,0 +1,5 @@
+npx orch --help
+npx pol --help
+
+npx orch --info --keep --in in --out out --err err rules/00_demo.n3
+npx pol --info --keep --single out/demo.ttl 
