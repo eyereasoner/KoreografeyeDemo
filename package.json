@@ -11,6 +11,6 @@
     "orch:ldn": "npx orch --info --keep --in in --out out --err err rules/ldn.n3",
     "orch:ntfy": "npx orch --info --keep --in in --out out --err err rules/ntfy.n3",
     "pol": "npx pol --info --keep --single out/demo.ttl",
-    "clean": "rm out/*. ; err/*"
+    "clean": "rm out/* ; rm err/*"
   }
 }

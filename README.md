@@ -4,7 +4,7 @@ This is a demonstration how to run the Koreografeye reasoner.
 
 ## Installation
 
-npm install 
+npm install koreografeye -g 
 
 ## Package content
 
