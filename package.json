@@ -12,5 +12,9 @@
     "orch:ntfy": "npx orch --info --keep --in in --out out --err err rules/ntfy.n3",
     "pol": "npx pol --info --keep --single out/demo.ttl",
     "clean": "rm out/* ; rm err/*"
+  },
+  "dependencies": {
+    "koreografeye": "^0.2.1",
+    "nodemailer": "^6.9.1"
   }
 }
