@@ -17,7 +17,7 @@
     ex:MySendNotificationDemo pol:policy [
         a fno:Execution ;
         fno:executes ex:sendNotification ;
-        ex:to <http://patrickhochstenbach.net/inbox/> ;
+        ex:to <https://httpbin.org/post> ;
         ex:notification [
                 a as:Accept ;
                 as:inReplyTo ?id ;
