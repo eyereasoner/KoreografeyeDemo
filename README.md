@@ -4,7 +4,11 @@ This is a demonstration how to run the Koreografeye reasoner.
 
 ## Installation
 
+```
+git clone git@github.com:eyereasoner/KoreografeyeDemo.git YourProject
+cd YourProject
 npm install
+```
 
 ## Package content
 
