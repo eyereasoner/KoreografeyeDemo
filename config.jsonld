@@ -18,24 +18,12 @@
       "@type": "DemoPlugin"
     },
     {
-      "@id": "http://example.org/sendEmail",
-      "@type": "SendEmailPlugin",
-      "host": "mail.gmx.com",
-      "port": 465,
-      "secure": true
-    },
-    {
       "@id": "http://example.org/sendNotification",
       "@type": "SendNotificationPlugin",
       "context": [
           "https://www.w3.org/ns/activitystreams" ,
           "https://purl.org/coar/notify"
       ]
-    },
-    {
-      "@id": "http://example.org/sendNtfy",
-      "@type": "SendNtfyPlugin",
-      "topic": "MiniOrchestrator12345" 
     }
   ]
 }

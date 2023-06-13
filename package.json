@@ -7,9 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "orch:demo": "npx orch --info --keep --in in --out out --err err rules/demo.n3",
-    "orch:email": "npx orch --info --keep --in in --out out --err err rules/email.n3",
     "orch:ldn": "npx orch --info --keep --in in --out out --err err rules/ldn.n3",
-    "orch:ntfy": "npx orch --info --keep --in in --out out --err err rules/ntfy.n3",
     "pol": "npx pol --info --keep --single out/demo.ttl",
     "clean": "rm out/* ; rm err/*"
   },

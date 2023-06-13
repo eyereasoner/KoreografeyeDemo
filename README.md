@@ -55,7 +55,9 @@ File: `rules/demo.n3`
 
 ## Demonstration
 
-Process all RDF resource in the `in` directory against one `demo` rule.
+### Demo rule
+
+Process all RDF resource in the `in` directory using the `demo.n3` rule file.
 
 Step 1. Run the orchestrator component
 
@@ -85,15 +87,45 @@ npm run pol
 
 This will return some debugging output from the `DemoPlugin` implementation of the demo policy.
 
+### LDN rule
+
+Process all RDF resource in the `in` directory using the `ldn.n3` rule file.
+
+Step 1. Run the orchestrator component
+
+```
+npx orch --info --keep --in in --out out --err err rules/ldn.n3
+```
+
+or shorter
+
+```
+npm run orch:ldn
+```
+
+This will generate a `out/demo.ttl` file as output containing the input RDF resource plus injected policies.
+
+Step 2. Run the policy executor against the output of step 1
+
+```
+npx pol --info --keep --single out/demo.ttl
+```
+
+or shorter
+
+```
+npm run pol
+```
+
+This will send a notification to `https://httpbin.org/post` using the `SendNotificationPlugin` implementation of the demo policy.
+
 ## Configuration
 
 The [ComponentsJS](https://componentsjs.readthedocs.io/en/latest/) configuration file `config.jsonld` defined all start up parameters of the Koreografeye components.
 
 - `urn:koreografeye:reasonerInstance` contains arguments to pass to the internal [Eye](https://github.com/eyereasoner/eye) reasoner. On our example we make use of the [EyeJS](https://github.com/eyereasoner/eye-js) implementation.
 - `http://example.org/demoPlugin` defines the demo policy, `demoPlugin` . The Koreografeye plugin `DemoPlugin` is an implementation of this policy.
-- `http://example.org/sendEmail` defines the startup parameters of the `sendEmail` policy. The Koreografeye plugin `SendEmailPlugin` is an implementation of this policy.
 - `http://example.org/sendNotify` defines the startup parameters of the `sendNotify` policy. The Koreografeye plugin `SendNotificationPlugin` is an implementation of this policy.
-- `http://example.org/sendNtfy` defined the startup parameters of the `sendNtfy` policy. The Koreografete plugin `SendNtfyPlugin` is an implementation of this policy
 
 ## More documentation
 
